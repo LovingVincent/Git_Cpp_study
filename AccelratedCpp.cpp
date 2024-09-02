@@ -1,41 +1,54 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <ios>
+#include <vector>
+#include <algorithm>
+using std::cin; using std::setprecision;
+using std::cout; using std::string;
+using std::endl; using std::streamsize;
+using std::vector;
 
 int main()
 {
-	std::cout << "Please enter your first name : ";
-	std::string name;
-	std::cin >> name;
+	cout << "Please enter your first name : ";
+	string name;
+	cin >> name;
+	cout << "Hello, " << name << "!" << endl;
 
-	const std::string greeting = "Hello, " + name + "!";
+	cout << "Please enter your midterm and final exam grades : ";
+	double midterm, final;
+	cin >> midterm >> final;
 
-	const int pad = 1;
+	cout << "Enter all your homework grades, "
+		"followed by end-of-file";
 
-	const int rows = pad * 2 + 3;
-	const std::string::size_type cols = greeting.size() + pad * 2 + 2;
-	
-	std::cout << std::endl;
+	int count = 0;
 
-	for(int r = 0; r!= rows; ++r){
-		std::string::size_type c = 0;
+	double x;
+	vector<double> homework;
 
-		while (c != cols)
-		{
-			if (r == pad + 1 && c == pad + 1) {
-				std::cout << greeting;
-				c += greeting.size();
-			}
-			else
-			{
-				if (r == 0 || r == rows - 1 || c == 0 || c == cols - 1)
-					std::cout << "*";
-				else
-					std::cout << " ";
-				c++;
-			}
-		}
-		std::cout << std::endl;
+	while (cin >> x)
+	{
+		homework.push_back(x);
 	}
+
+	typedef vector<double>::size_type vec_sz;
+	vec_sz size = homework.size();
+
+	if (size == 0)
+	{
+		cout << endl << "You must enter your grades. "
+			"Please try again" << endl;
+		return 1;
+	}
+
+	std::sort(homework.begin(), homework.end());
+	vec_sz mid = size / 2;
+	double median;
+	median = size % 2 == 0 ? (homework[mid] + homework[mid - 1]) / 2 : homework[mid];
+	streamsize prec = cout.precision();
+	cout << "Your final grade is " << setprecision(3) << 0.2 * midterm + 0.4 * final + 0.4 * median / count << setprecision(prec) << endl;
 	return 0;
 }
 

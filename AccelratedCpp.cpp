@@ -5,7 +5,7 @@
 #include <vector>
 #include <algorithm>
 
-// gitKraken Test
+// Ammend Test
 
 using std::cin; using std::setprecision;
 using std::cout; using std::string;

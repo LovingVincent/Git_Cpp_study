@@ -4,6 +4,7 @@
 #include <ios>
 #include <vector>
 #include <algorithm>
+
 using std::cin; using std::setprecision;
 using std::cout; using std::string;
 using std::endl; using std::streamsize;

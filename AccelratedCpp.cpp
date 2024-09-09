@@ -14,10 +14,7 @@ using std::cout; using std::string;
 using std::endl; using std::streamsize;
 using std::vector;
 
-// fastfoward
-// fastfoward2
-// merge
-// merge2
+// conflict2
 
 int main()
 {

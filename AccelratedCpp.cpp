@@ -15,6 +15,7 @@ using std::endl; using std::streamsize;
 using std::vector;
 
 //conflict1
+//conflict1-1
 
 int main()
 {

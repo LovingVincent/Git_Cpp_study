@@ -16,6 +16,7 @@ using std::vector;
 
 // fastfoward
 // fastfoward2
+// merge
 
 int main()
 {

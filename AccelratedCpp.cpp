@@ -14,8 +14,11 @@ using std::cout; using std::string;
 using std::endl; using std::streamsize;
 using std::vector;
 
+
 //conflict1
 //conflict1-1
+// conflict2
+// conflict2-1
 
 int main()
 {

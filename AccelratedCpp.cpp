@@ -15,6 +15,7 @@ using std::endl; using std::streamsize;
 using std::vector;
 
 // fastfoward
+// fastfoward2
 
 int main()
 {

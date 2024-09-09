@@ -14,7 +14,6 @@ using std::cout; using std::string;
 using std::endl; using std::streamsize;
 using std::vector;
 
-
 int main()
 {
 	std::string a;

@@ -1,5 +1,3 @@
-#include <iostream>
-#include <vector>
 #include "Student_info.h"
 
 using std::vector;
@@ -29,3 +27,4 @@ std::istream& read(std::istream& is, Student_info& s)
 	read_hw(is, s.homework);
 	return is;
 }
+

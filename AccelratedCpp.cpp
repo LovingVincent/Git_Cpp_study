@@ -2,20 +2,32 @@
 #include <string>
 #include <iomanip>
 #include <ios>
-#include <vector>
 #include <algorithm>
 #include <stdexcept>
 #include "median.h"
 #include "Student_info.h"
 #include "grade.h"
+#include "util.h"
 
 using std::cin; using std::setprecision;
 using std::cout; using std::string;
 using std::endl; using std::streamsize;
 using std::vector;
 
+// fastfoward
+
 int main()
 {
+	string s;
+	while (std::getline(cin, s)) {
+		vector<string> v = split(s);
+
+		for (vector<string>::const_iterator it = v.begin(); it != v.end(); ++it)
+		{
+			cout << *it << endl;
+		}
+	}
+	
 	std::string a;
 	vector<Student_info> students;
 	Student_info record;
@@ -44,6 +56,7 @@ int main()
 		cout << endl;
 	}
 	return 0;
+	
 }
 
 

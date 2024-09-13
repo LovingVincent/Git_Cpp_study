@@ -1,7 +1,21 @@
 #include "grade.h"
 #include "median.h"
-
+#include <algorithm>
 using std::vector; using std::list;
+using std::ostream; using std::string;
+
+double grade_aux(const Student_info& s)
+{
+	try {
+		return grade(s);
+	}
+	catch (std::domain_error)
+	{
+		return grade(s.midterm, s.final, 0);
+	}
+		
+}
+
 double grade(double midterm, double final, double homework)
 {
 	return 0.2 * midterm + 0.4 * final + 0.4 * homework;
@@ -37,4 +51,18 @@ list<Student_info> extract_fail(list<Student_info>& students)
 			++iter;
 	}
 	return fail;
+}
+
+double median_analysis(const vector<Student_info>& students)
+{
+	vector<double> grades;
+	std::transform(students.begin(), students.end(), std::back_inserter(grades), grade_aux);
+	return median(grades);
+}
+
+void write_analysis(ostream out, const string& name,
+	double analysis(const vector<Student_info>& did, 
+		const vector<Student_info>& didn)
+{
+
 }

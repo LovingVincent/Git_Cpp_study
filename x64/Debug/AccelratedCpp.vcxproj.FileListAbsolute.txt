@@ -1,1 +1,2 @@
 D:\Workspace\0.personal\0. study\2.C++\Accelrated\AccelratedCpp\x64\Debug\AccelratedCpp.exe
+D:\Workspace\0.personal\0. study\2.C++\Accelrated\Git_Cpp_study\x64\Debug\AccelratedCpp.exe

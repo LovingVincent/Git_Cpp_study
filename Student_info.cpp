@@ -1,5 +1,5 @@
 #include "Student_info.h"
-
+#include <algorithm>
 using std::vector;
 
 bool compare(const Student_info& x, Student_info& y)
@@ -28,3 +28,7 @@ std::istream& read(std::istream& is, Student_info& s)
 	return is;
 }
 
+bool did_all_hw(const Student_info& s)
+{
+	return std::find(s.homework.begin(), s.homework.end(), 0) == s.homework.end();
+}
